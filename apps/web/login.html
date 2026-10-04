@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090807" />
+    <title>Sign in | Book2Skill</title>
+    <link rel="icon" type="image/svg+xml" href="/static/book2skill-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/login.css" />
+  </head>
+  <body>
+    <video class="login-video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="/static/login-background.mp4" type="video/mp4" />
+    </video>
+    <div class="login-shade" aria-hidden="true"></div>
+
+    <main class="login-layout">
+      <a class="login-brand" href="/login" aria-label="Book2Skill sign in">
+        <img src="/static/book2skill-logo.svg" alt="" width="52" height="52" />
+        <span>Book2Skill</span>
+      </a>
+
+      <div class="login-content">
+        <section class="flow-scene" aria-label="Knowledge flowing from a book into a skill">
+          <p class="scene-note">From reading to ready-to-use knowledge</p>
+          <div class="flow-graphic" aria-hidden="true">
+            <div class="flow-book">
+              <img src="/static/book2skill-logo.svg" alt="" width="112" height="112" />
+            </div>
+            <div class="flow-track">
+              <span class="flow-node node-one"></span>
+              <span class="flow-node node-two"></span>
+              <span class="flow-node node-three"></span>
+            </div>
+            <div class="flow-skill">
+              <span class="skill-line line-one"></span>
+              <span class="skill-line line-two"></span>
+              <span class="skill-line line-three"></span>
+              <span class="skill-check"></span>
+            </div>
+          </div>
+          <p class="scene-caption">Ideas in. Useful skills out.</p>
+        </section>
+
+        <section class="login-panel" aria-labelledby="login-heading">
+        <p class="login-eyebrow">Your knowledge workspace</p>
+        <h1 id="login-heading">Welcome back</h1>
+        <p class="login-intro">Sign in to turn your reading into reusable knowledge.</p>
+
+        <div class="login-tabs" role="tablist" aria-label="Account action">
+          <button id="signin-tab" class="login-tab active" type="button" role="tab">Sign in</button>
+          <button id="signup-tab" class="login-tab" type="button" role="tab">Create account</button>
+        </div>
+
+        <form id="login-form">
+          <label for="email-input">Email</label>
+          <input id="email-input" type="email" autocomplete="email" required />
+
+          <label for="password-input">Password</label>
+          <input id="password-input" type="password" autocomplete="current-password" minlength="10" required />
+
+          <p id="login-message" class="login-message" role="status" aria-live="polite"></p>
+          <button id="login-submit" class="login-submit" type="submit">Sign in</button>
+        </form>
+
+        <p class="login-footnote">New here? Create an account to start the 7-day trial.</p>
+        </section>
+      </div>
+    </main>
+    <script src="/static/login.js"></script>
+  </body>
+</html>

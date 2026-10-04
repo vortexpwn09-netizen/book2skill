@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book2Skill | Turn Books into AI-Ready Skills</title>
+    <meta
+      name="description"
+      content="Book2Skill transforms books and knowledge sources into validated AI-ready skill packages."
+    />
+    <link rel="icon" type="image/svg+xml" href="/static/book2skill-logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="glow glow-one"></div>
+      <div class="glow glow-two"></div>
+      <div class="grid-line"></div>
+
+      <header class="topbar container">
+        <div class="brand-wrap">
+          <img class="brand-logo" src="/static/book2skill-logo.svg" alt="" width="48" height="48" />
+          <div class="brand-copy">
+            <span class="brand-name">Book2Skill</span>
+            <span class="brand-tag">knowledge compiler</span>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#pipeline">How it works</a>
+          <a href="#demo">Compiler</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#outputs">Outputs</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button id="account-button" class="ghost-button" type="button">Sign in</button>
+          <button id="download-header" class="ghost-button" type="button" disabled>Download</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero container">
+          <div class="hero-copy">
+            <p class="eyebrow">Knowledge compiler</p>
+            <h1>
+              TURN BOOKS<br />
+              <span>INTO AI-READY</span><br />
+              SKILLS.
+            </h1>
+            <p class="lead">
+              Book2Skill transforms books and knowledge sources into structured,
+              validated, reusable AI-ready artifacts.
+            </p>
+
+            <div class="cta-row">
+              <button type="button" class="primary-button" id="compile-sample">
+                Compile sample
+              </button>
+              <a href="#pipeline" class="secondary-link">Explore workflow</a>
+            </div>
+
+            <div class="hero-tags" aria-label="Supported input types">
+              <span>PDF</span>
+              <span>DOCX</span>
+              <span>Markdown</span>
+              <span>TXT</span>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-label="Book2Skill knowledge graphic">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+            <img
+              class="hero-book"
+              src="/static/book2skill-logo.svg"
+              alt="Open book emblem"
+              width="360"
+              height="360"
+            />
+
+            <div class="floating-panel panel-one">
+              <span class="panel-label">Concepts</span>
+              <strong>21</strong>
+            </div>
+
+            <div class="floating-panel panel-two">
+              <span class="panel-label">Validated</span>
+              <strong>96%</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="pipeline container" id="pipeline">
+          <div class="section-heading">
+            <p class="eyebrow">How it works</p>
+            <h2>From raw source to applied knowledge.</h2>
+          </div>
+
+          <div class="pipeline-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Ingest</h3>
+              <p>Reads books, notes, markdown, PDF, and docx sources safely.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Parse</h3>
+              <p>Normalizes structure, headings, paragraphs, and provenance.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Extract</h3>
+              <p>Finds concepts, principles, methods, constraints, and references.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">04</span>
+              <h3>Validate</h3>
+              <p>Rejects weak artifacts and keeps only grounded, useful knowledge.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">05</span>
+              <h3>Compile</h3>
+              <p>Packages material into AI-ready skill exports and metadata.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">06</span>
+              <h3>Export</h3>
+              <p>Prepares skill packs, context bundles, and training-ready results.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="pricing container" id="pricing">
+          <div class="section-heading">
+            <p class="eyebrow">Membership</p>
+            <h2>Start free. Upgrade when you're ready.</h2>
+          </div>
+
+          <div class="plan-grid">
+            <article class="plan-card">
+              <p class="eyebrow">Starter</p>
+              <h3>Free</h3>
+              <p class="plan-price" id="free-plan-price">7 days free</p>
+              <p>Full compiler access during your trial.</p>
+              <p>Download each result as an AI-ready SKILL.md file.</p>
+            </article>
+
+            <article class="plan-card premium-plan">
+              <p class="eyebrow">For regular use</p>
+              <h3>Premium</h3>
+              <p class="plan-price" id="premium-price">Premium subscription</p>
+              <p>Unlimited monthly compilations.</p>
+              <p>Manage your subscription securely through Stripe.</p>
+              <button id="upgrade-button" class="primary-button small-button" type="button">
+                Subscribe to Premium
+              </button>
+            </article>
+          </div>
+          <p id="trial-policy" class="trial-policy">
+            One free trial per network address every 12 months. We keep a protected one-way fingerprint, not the raw IP address.
+          </p>
+          <p id="account-status" class="account-status" aria-live="polite">Sign in to use the compiler.</p>
+        </section>
+
+        <section class="demo container" id="demo">
+          <div class="demo-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">Processor</p>
+                <h3>Compile a sample skill package</h3>
+              </div>
+              <span id="api-status" class="status-pill">Checking API...</span>
+            </div>
+
+            <form id="compile-form">
+              <label>
+                Title
+                <input id="title-input" type="text" placeholder="Leave blank to use the PDF filename" />
+              </label>
+
+              <div class="upload-control">
+                <span>PDF book or document</span>
+                <input id="pdf-input" type="file" accept="application/pdf,.pdf" />
+                <div class="upload-picker-row">
+                  <button id="choose-pdf" class="ghost-button" type="button">Choose PDF</button>
+                  <span id="file-name">Choose a searchable PDF (up to 25 MB)</span>
+                </div>
+              </div>
+
+              <label>
+                Or paste source text
+                <textarea id="text-input" rows="5">AI agents use context and memory. Principle: keep actions focused. Method: plan first, then execute with discipline.</textarea>
+              </label>
+
+              <button type="submit" class="primary-button small-button">Generate AI-ready file</button>
+            </form>
+          </div>
+
+          <div class="output-panel" id="outputs">
+            <div class="panel-header compact-header">
+              <div>
+                <p class="eyebrow">Output preview</p>
+                <h3>Generated knowledge</h3>
+              </div>
+              <button id="download-output" class="ghost-button" type="button" disabled>Download SKILL.md</button>
+            </div>
+
+            <pre id="result-output">Waiting for compilation...</pre>
+          </div>
+        </section>
+      </main>
+
+      <dialog id="auth-dialog" class="auth-dialog">
+        <div class="auth-card">
+          <button id="auth-close" class="auth-close" type="button" aria-label="Close sign-in dialog">×</button>
+          <p class="eyebrow">Book2Skill account</p>
+          <h2 id="auth-title">Sign in</h2>
+          <div class="auth-tabs" role="tablist" aria-label="Account action">
+            <button id="login-tab" class="auth-tab active" type="button" role="tab">Sign in</button>
+            <button id="register-tab" class="auth-tab" type="button" role="tab">Create account</button>
+          </div>
+          <form id="auth-form">
+            <label>
+              Email
+              <input id="auth-email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Password
+              <input id="auth-password" type="password" autocomplete="current-password" minlength="10" required />
+            </label>
+            <p id="auth-message" class="auth-message" role="status" aria-live="polite"></p>
+            <button id="auth-submit" class="primary-button small-button" type="submit">Sign in</button>
+          </form>
+        </div>
+      </dialog>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: book2skill
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: BOOK2SKILL_ENV
+        value: production
+      - key: BOOK2SKILL_COOKIE_SECURE
+        value: "true"
+      - key: BOOK2SKILL_DB_PATH
+        value: /tmp/book2skill.db
+      - key: BOOK2SKILL_FREE_TRIAL_DAYS
+        value: "7"
+      - key: BOOK2SKILL_IP_TRIAL_COOLDOWN_DAYS
+        value: "365"
+      - key: BOOK2SKILL_IP_HASH_SECRET
+        generateValue: true
+      - key: FORWARDED_ALLOW_IPS
+        value: "*"
+      - key: CORS_ORIGINS
+        value: "*"
