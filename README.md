@@ -46,7 +46,9 @@ New accounts receive seven days of free compiler access. Only one free trial is 
 
 ## Free Hosting on Render
 
-This project includes a `render.yaml` Blueprint for a free Render web service. Push the project to a GitHub repository, then create a new Blueprint in Render and select that repository. Render will provide an `onrender.com` address; set `PUBLIC_BASE_URL` to that address in the service environment before enabling Stripe checkout. Set a stable `BOOK2SKILL_IP_HASH_SECRET` and use `FORWARDED_ALLOW_IPS=*` only behind Render's proxy so the trial limit sees the visitor IP.
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vortexpwn09-netizen/book2skill)
+
+This project includes a `render.yaml` Blueprint for a free Render web service. Click the button above (or create a new Blueprint in Render and select this repository). Render will provide an `onrender.com` address; set `PUBLIC_BASE_URL` to that address in the service environment before enabling Stripe checkout. Set a stable `BOOK2SKILL_IP_HASH_SECRET` and use `FORWARDED_ALLOW_IPS=*` only behind Render's proxy so the trial limit sees the visitor IP.
 
 Render's free service has an ephemeral filesystem and may sleep when idle. This setup is suitable for a demo, but the local SQLite database can reset when the service restarts or redeploys, losing accounts and trial records. Use persistent database storage before selling subscriptions or relying on user accounts. A custom domain also needs a domain you own.
 

@@ -3,6 +3,13 @@ __pycache__/
 .git/
 .venv/
 output/
+data/
 *.pyc
 *.pyo
 *.pyd
+*.db
+*.db-shm
+*.db-wal
+.env
+.env.*
+!.env.example
